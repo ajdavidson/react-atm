@@ -4,11 +4,15 @@ const ATMDeposit = ({ onChange, isDeposit, isValid }) => {
   return (
     <label className="label huge">
       <h3> {choice[Number(!isDeposit)]}</h3>
-      <input id="number-input" type="number" width="200" onChange={onChange}></input>
-      <input type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"></input>
+      <input id="number-input" type="number" width="200" step="20" min="0" onChange={onChange} onKeyPress={preventMe} onPaste={preventMe}/>
+      <input type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
     </label>
   );
-}; 
+};
+
+const preventMe = (e) => {
+  e.preventDefault();
+};
 
 const Account = () => {
   // let deposit = 0; // state of this transaction
@@ -49,6 +53,7 @@ const Account = () => {
       setIsDeposit(false);
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit}>
