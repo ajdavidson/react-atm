@@ -6,7 +6,7 @@
   <!-- <a href="https://reactatm.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">React Atm</h1>
+<h1 align="center">React ATM</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/ajdavidson/react-atm?color=56BEB8">
