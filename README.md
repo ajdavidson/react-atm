@@ -44,9 +44,9 @@
 
 <br>
 
-## :dart: About ##
+## :eye_speech_bubble: About ##
 
-Describe your project
+:atm: Describe your project :moneybag:
 
 ## :sparkles: Features ##
 
