@@ -17,7 +17,7 @@
 
   <img alt="License" src="https://img.shields.io/github/license/ajdavidson/react-atm?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/ajdavidson/react-atm?color=56BEB8" /> -->
+  <img alt="Github issues" src="https://img.shields.io/github/issues/ajdavidson/react-atm?color=56BEB8" />
 
   <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/ajdavidson/react-atm?color=56BEB8" /> -->
 
