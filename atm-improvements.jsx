@@ -21,33 +21,33 @@ const Account = () => {
     const [totalState, setTotalState] = React.useState(0);
     const [isDeposit, setIsDeposit] = React.useState(true);
     const [atmMode, setAtmMode] = React.useState('');
-    const [validTransaction, setValidTransaction] = React.useState(false);
+    const [isValid, setIsValid] = React.useState(false);
 
     let status = `Account Balance $ ${totalState} `;
     console.log(`Account Rendered with isDeposit: ${isDeposit}`);
     const handleChange = (event) => {
         console.log(Number(event.target.value));
         if (Number(event.target.value) <= 0) {
-            return setValidTransaction(false);
+            return setIsValid(false);
         }
         if (atmMode === 'Cash Back' && Number(event.target.value) > totalState) {
-            setValidTransaction(false);
+            setIsValid(false);
         } else {
-            setValidTransaction(true);
+            setIsValid(true);
         }
         setDeposit(Number(event.target.value));
     };
     const handleSubmit = (event) => {
         let newTotal = isDeposit ? totalState + deposit : totalState - deposit;
         setTotalState(newTotal);
-        setValidTransaction(false);
+        setIsValid(false);
         event.preventDefault();
     };
 
     const handleModeSelect = (event) => {
         console.log(event.target.value);
         setAtmMode(event.target.value);
-        setValidTransaction(false);
+        setIsValid(false);
         if (event.target.value === 'Deposit') {
             setIsDeposit(true);
         } else {
@@ -74,7 +74,7 @@ const Account = () => {
                     <ATMDeposit
                         onChange={handleChange}
                         isDeposit={isDeposit}
-                        isValid={validTransaction}
+                        isValid={isValid}
                     />
                 )}
             </>

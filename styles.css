@@ -1,11 +1,16 @@
+#root {
+    height: 100vh;
+    width: 100vw;
+}
+
 button {
-  background-color: #0c80f3;
-  border: 6px solid #0ff166;
-  border-radius: 10px;
-  width: 150px;
+    background-color: #0c80f3;
+    border: 6px solid #0ff166;
+    border-radius: 10px;
+    width: 150px;
 }
 
 select {
-  display: block;
-  margin-bottom: 20px;
+    display: block;
+    margin-bottom: 20px;
 }
