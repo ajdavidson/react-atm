@@ -3,8 +3,8 @@ const ATMDeposit = ({onChange, isDeposit, isValid}) => {
     console.log(`ATM isDeposit: ${isDeposit}`);
     return (
         <label className="label huge">
-            <h3> {choice[Number(!isDeposit)]}</h3>
-            <input id="number-input" type="number" width="200" step="20" min="0" onChange={onChange}
+            <h3><i className="fas fa-money-bill-wave"></i> {choice[Number(!isDeposit)]}</h3>
+            <input id="number-input" type="number" width="200" step="20" min="0" max="1000" onChange={onChange}
                    onKeyPress={preventMe} onPaste={preventMe}/>
             <input type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
         </label>
@@ -59,7 +59,8 @@ const Account = () => {
     return (
         <form onSubmit={handleSubmit}>
             <>
-                <h2 id="total">{status}</h2>
+                <h3><i className="fas fa-piggy-bank"></i> Welcome to PIGGY Bank</h3>
+                <h3 id="total"><i className="fas fa-chart-bar"></i> {status}</h3>
                 <label>Select an action below to continue</label>
                 <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
                     <option id="no-selection" value=""/>
