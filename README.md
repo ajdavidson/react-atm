@@ -67,7 +67,7 @@ The following tools were used in this project:
 - [JavaScript](https://www.ecma-international.org/)
 - [CSS](https://www.w3.org/TR/CSS/#css)
 - [HTML](https://whatwg.org/)
-- [Node.js](https://nodejs.org/en/)
+- [Babel](https://babeljs.io/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 
