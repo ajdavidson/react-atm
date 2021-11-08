@@ -95,7 +95,7 @@ $ Available on:
   http://localhost:8080
 
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:8080>
 ```
 
 ## :memo: License ##
