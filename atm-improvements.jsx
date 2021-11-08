@@ -3,7 +3,7 @@ const ATMDeposit = ({onChange, isDeposit, isValid}) => {
     console.log(`ATM isDeposit: ${isDeposit}`);
     return (
         <React.Fragment>
-            <h3><i className="fas fa-money-bill-wave"></i> {choice[Number(!isDeposit)]}</h3>
+            <h3 style={{marginBottom:"5px",marginTop:"7px"}}><i className="fas fa-money-bill-wave"></i> {choice[Number(!isDeposit)]}</h3>
             <input id="number-input" type="number" width="200" step="20" min="0" max="1000" onChange={onChange}
                    onKeyPress={preventMe} onPaste={preventMe}/>
             <input style={{border: "3px solid #7FFF00", borderRadius: "7px", fontWeight:"bold", color:"#006dad"}} type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
@@ -17,7 +17,7 @@ const preventMe = (e) => {
 
 
 const Account = () => {
-    const defAtmMsg = 'Piggy Bank ATM';
+    const defAtmMsg = 'PIGGY Bank ATM';
     const [deposit, setDeposit] = React.useState(0);
     const [totalState, setTotalState] = React.useState(2700);
     const [isDeposit, setIsDeposit] = React.useState(true);
@@ -135,7 +135,7 @@ const Account = () => {
 
             <form onSubmit={handleSubmit}>
 
-                <h3><i className="fas fa-piggy-bank fa-lg"></i> {atmMsg}</h3>
+                <h3 style={{marginLeft:"0px"}}><i className="fas fa-piggy-bank fa-2x"></i> {atmMsg}</h3>
                 <h3 id="total"><i className="fas fa-chart-bar fa-lg"></i> {status}</h3>
                 <label>Select or use QuickCash Buttons</label>
                 <select style={{border: "3px solid #7FFF00", borderRadius: "7px", fontWeight:"bold", color:"#006dad"}}
