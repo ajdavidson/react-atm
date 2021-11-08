@@ -47,8 +47,12 @@ const Account = () => {
         event.preventDefault();
         let msg = isDeposit ? 'Depositing...' : 'Please take your Cash...';
         setAtmMsg(msg);
-        setTimeout(function(){ setAtmMsg('Transaction Complete...'); }, 3000);
-        setTimeout(function(){ setAtmMsg(defAtmMsg); }, 6000);
+        setTimeout(function () {
+            setAtmMsg('Transaction Complete...');
+        }, 3000);
+        setTimeout(function () {
+            setAtmMsg(defAtmMsg);
+        }, 6000);
     };
 
     const handleModeSelect = (event) => {
@@ -57,54 +61,62 @@ const Account = () => {
         setIsValid(false);
         if (event.target.value === 'Deposit') {
             setAtmMsg('Enter Cash Below...');
+            setTimeout(function () {
+                setAtmMsg('Up to $1000...');
+            }, 3000);
             setIsDeposit(true);
         } else {
             setAtmMsg('Preparing to dispense...');
+            setTimeout(function () {
+                setAtmMsg('Enter Amount Below...');
+            }, 3000);
             setIsDeposit(false);
         }
-        setTimeout(function(){ setAtmMsg(defAtmMsg); }, 4000);
+        setTimeout(function () {
+            setAtmMsg(defAtmMsg);
+        }, 6000);
     };
 
     return (
         <React.Fragment>
             <button
                 style={{left: "35px", top: "294px"}}
-                onClick={()=>  totalState>=20 ? setTotalState(totalState - 20) : ''}
+                onClick={() => totalState >= 20 ? setTotalState(totalState - 20) : ''}
             >20
             </button>
             <button
                 style={{left: "35px", top: "334px"}}
-                onClick={()=>  totalState>=40 ? setTotalState(totalState - 40) : ''}
+                onClick={() => totalState >= 40 ? setTotalState(totalState - 40) : ''}
             >40
             </button>
             <button
                 style={{left: "35px", top: "375px"}}
-                onClick={()=>  totalState>=60 ? setTotalState(totalState - 60) : ''}
+                onClick={() => totalState >= 60 ? setTotalState(totalState - 60) : ''}
             >60
             </button>
             <button
                 style={{left: "35px", top: "415px"}}
-                onClick={()=>  totalState>=80 ? setTotalState(totalState - 80) : ''}
+                onClick={() => totalState >= 80 ? setTotalState(totalState - 80) : ''}
             >80
             </button>
             <button
                 style={{left: "468px", top: "294px"}}
-                onClick={()=>  totalState>=100 ? setTotalState(totalState - 100) : ''}
+                onClick={() => totalState >= 100 ? setTotalState(totalState - 100) : ''}
             >100
             </button>
             <button
                 style={{left: "468px", top: "334px"}}
-                onClick={()=>  totalState>=200 ? setTotalState(totalState - 200) : ''}
+                onClick={() => totalState >= 200 ? setTotalState(totalState - 200) : ''}
             >200
             </button>
             <button
                 style={{left: "468px", top: "376px"}}
-                onClick={()=>  totalState>=500 ? setTotalState(totalState - 500) : ''}
+                onClick={() => totalState >= 500 ? setTotalState(totalState - 500) : ''}
             >500
             </button>
             <button
                 style={{left: "464px", top: "417px"}}
-                onClick={()=>  totalState>=1000 ? setTotalState(totalState - 1000) : ''}
+                onClick={() => totalState >= 1000 ? setTotalState(totalState - 1000) : ''}
             >1000
             </button>
 
