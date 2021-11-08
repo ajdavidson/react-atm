@@ -50,13 +50,15 @@ React ATM Simulator. Refactoring assignment started with setting the
 increments to be of 20 for the input field. A minimum of 0 and maximum 
 of 1000 was also set. KeyPress and Paste were also suppressed to enforce
 a 20 step imitation.  A field of buttons was created to simulate the QuickCash 
-withdrawal feature.  Conditions were programmed to ensure continued validity.
+withdrawal feature.  Many conditions were programmed to ensure continued validity.
+Provided a message area with dynamic response using state.
 
 ## :sparkles: Features ##
 
 :heavy_check_mark: Set to work with increments of 20 max 1000\
 :heavy_check_mark: Many conditions programmed to assure validity\
-:heavy_check_mark: QuickCash Feature
+:heavy_check_mark: Dynamic StateFul response message element\
+:heavy_check_mark: QuickCash feature
 
 ## :rocket: Technologies ##
 

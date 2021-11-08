@@ -56,10 +56,13 @@ const Account = () => {
         setAtmMode(event.target.value);
         setIsValid(false);
         if (event.target.value === 'Deposit') {
+            setAtmMsg('Enter Cash Below...');
             setIsDeposit(true);
         } else {
+            setAtmMsg('Preparing to dispense...');
             setIsDeposit(false);
         }
+        setTimeout(function(){ setAtmMsg(defAtmMsg); }, 4000);
     };
 
     return (
