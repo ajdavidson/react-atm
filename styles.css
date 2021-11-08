@@ -1,35 +1,72 @@
-body{
+body {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
+
 .container {
     width: 100%;
     height: 100%;
     margin: 0;
 }
 
-button {
-    background-color: #0c80f3;
-    border: 6px solid #0ff166;
-    border-radius: 10px;
-    width: 150px;
-}
+/*button {*/
+/*    background-color: #0c80f3;*/
+/*    border: 6px solid #0ff166;*/
+/*    border-radius: 10px;*/
+/*    width: 150px;*/
+/*}*/
+
+/*#qc button {*/
+/*    position: absolute;*/
+/*    background:none;*/
+/*    border:0;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*}*/
 
 select {
     display: block;
     margin-bottom: 20px;
 }
+
 form {
     position: absolute;
     top: 220px;
-    left: 150px;
+    left: 140px;
 }
-.form-box{
+
+#form-box {
     background-image: url("atm-icon-blue.png");
     background-repeat: no-repeat;
-    position: relative;
+    position: absolute;
     left: 0px;
     height: 692px;
     width: 553px;
 }
+
+#root {
+    position: absolute;
+    left: 10px;
+    height: 692px;
+    width: 553px;
+}
+#root button {
+    position: absolute;
+    background:none;
+    border:0;
+    color: white;
+    font-weight: bold;
+}
+/*#qc {*/
+/*    position: absolute;*/
+/*    left: 10px;*/
+/*    height: 692px;*/
+/*    width: 553px;*/
+/*}*/
+
+/*#qc-20 {*/
+/*    position: absolute;*/
+/*    left: 42px;*/
+/*    top: 291px;*/
+/*}*/
