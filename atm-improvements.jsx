@@ -138,7 +138,7 @@ const Account = () => {
                 <h3 style={{marginLeft:"0px"}}><i className="fas fa-piggy-bank fa-2x"></i> {atmMsg}</h3>
                 <h3 id="total"><i className="fas fa-chart-bar fa-lg"></i> {status}</h3>
                 <label>Select or use QuickCash Buttons</label>
-                <select style={{border: "3px solid #7FFF00", borderRadius: "7px", fontWeight:"bold", color:"#006dad"}}
+                <select style={{border: "3px solid #7FFF00", borderRadius: "7px", fontWeight:"bold", color:"#006dad",marginTop:"5px"}}
                     onChange={(e) => handleModeSelect(e)}
                     name="mode" id="mode-select">
                     <option id="no-selection" value="">Transaction</option>
