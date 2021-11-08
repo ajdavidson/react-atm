@@ -3,7 +3,6 @@ const ATMDeposit = ({onChange, isDeposit, isValid}) => {
     console.log(`ATM isDeposit: ${isDeposit}`);
     return (
         <React.Fragment>
-
             <h3><i className="fas fa-money-bill-wave"></i> {choice[Number(!isDeposit)]}</h3>
             <input id="number-input" type="number" width="200" step="20" min="0" max="1000" onChange={onChange}
                    onKeyPress={preventMe} onPaste={preventMe}/>
@@ -16,20 +15,6 @@ const ATMDeposit = ({onChange, isDeposit, isValid}) => {
 const preventMe = (e) => {
     e.preventDefault();
 };
-
-// const QuickCash = () => {
-//
-//     return (
-//         <>
-//             <button style={{position: "absolute", left: "42px", top: "291px"}}
-//                     onClick={()=>alert('clicked')}
-//             >20
-//             </button>
-//             <button style={{position: "absolute", left: "42px", top: "331px"}}>40</button>
-//         </>
-//
-//     );
-// };
 
 
 const Account = () => {
@@ -144,4 +129,4 @@ const Account = () => {
 // ========================================
 
 ReactDOM.render(<Account/>, document.getElementById('root'));
-//ReactDOM.render(<QuickCash/>, document.getElementById('qc'));
+
