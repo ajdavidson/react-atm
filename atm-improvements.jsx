@@ -35,7 +35,7 @@ const preventMe = (e) => {
 const Account = () => {
     // let deposit = 0; // state of this transaction
     const [deposit, setDeposit] = React.useState(0);
-    const [totalState, setTotalState] = React.useState(0);
+    const [totalState, setTotalState] = React.useState(2700);
     const [isDeposit, setIsDeposit] = React.useState(true);
     const [atmMode, setAtmMode] = React.useState('');
     const [isValid, setIsValid] = React.useState(false);
@@ -76,42 +76,42 @@ const Account = () => {
         <React.Fragment>
             <button
                 style={{left: "35px", top: "294px"}}
-                onClick={() => setTotalState(totalState + 20)}
+                onClick={()=>  totalState>=20 ? setTotalState(totalState - 20) : ''}
             >20
             </button>
             <button
                 style={{left: "35px", top: "334px"}}
-                onClick={() => setTotalState(totalState + 40)}
+                onClick={()=>  totalState>=40 ? setTotalState(totalState - 40) : ''}
             >40
             </button>
             <button
                 style={{left: "35px", top: "375px"}}
-                onClick={() => setTotalState(totalState + 60)}
+                onClick={()=>  totalState>=60 ? setTotalState(totalState - 60) : ''}
             >60
             </button>
             <button
                 style={{left: "35px", top: "415px"}}
-                onClick={() => setTotalState(totalState + 80)}
+                onClick={()=>  totalState>=80 ? setTotalState(totalState - 80) : ''}
             >80
             </button>
             <button
                 style={{left: "468px", top: "294px"}}
-                onClick={() => setTotalState(totalState + 100)}
+                onClick={()=>  totalState>=100 ? setTotalState(totalState - 100) : ''}
             >100
             </button>
             <button
                 style={{left: "468px", top: "334px"}}
-                onClick={() => setTotalState(totalState + 200)}
+                onClick={()=>  totalState>=200 ? setTotalState(totalState - 200) : ''}
             >200
             </button>
             <button
                 style={{left: "468px", top: "376px"}}
-                onClick={() => setTotalState(totalState + 500)}
+                onClick={()=>  totalState>=500 ? setTotalState(totalState - 500) : ''}
             >500
             </button>
             <button
                 style={{left: "464px", top: "417px"}}
-                onClick={() => setTotalState(totalState + 1000)}
+                onClick={()=>  totalState>=1000 ? setTotalState(totalState - 1000) : ''}
             >1000
             </button>
 
