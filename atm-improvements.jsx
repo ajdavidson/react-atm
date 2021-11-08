@@ -6,10 +6,9 @@ const ATMDeposit = ({onChange, isDeposit, isValid}) => {
             <h3><i className="fas fa-money-bill-wave"></i> {choice[Number(!isDeposit)]}</h3>
             <input id="number-input" type="number" width="200" step="20" min="0" max="1000" onChange={onChange}
                    onKeyPress={preventMe} onPaste={preventMe}/>
-            <input type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
+            <input style={{border: "3px solid #7FFF00", borderRadius: "7px", fontWeight:"bold", color:"#006dad"}} type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
         </React.Fragment>
-    )
-        ;
+    );
 };
 
 const preventMe = (e) => {
@@ -78,7 +77,7 @@ const Account = () => {
     };
     const handleQuick = (num) => {
         setTotalState(totalState - num);
-        setAtmMsg('QuickCash: $'+num);
+        setAtmMsg('QuickCash: $' + num);
         setTimeout(function () {
             setAtmMsg(defAtmMsg);
         }, 1000);
@@ -93,43 +92,43 @@ const Account = () => {
     return (
         <React.Fragment>
             <button
-                style={{left: "35px", top: "294px"}}
-               // onClick={() => totalState >= 20 ? setTotalState(totalState - 20) : ''}
+                style={{left: "26px", top: "285px"}}
+                // onClick={() => totalState >= 20 ? setTotalState(totalState - 20) : ''}
                 onClick={() => totalState >= 20 ? handleQuick(20) : handleLowFunds()}
             >20
             </button>
             <button
-                style={{left: "35px", top: "334px"}}
+                style={{left: "26px", top: "326px"}}
                 onClick={() => totalState >= 40 ? handleQuick(40) : handleLowFunds()}
             >40
             </button>
             <button
-                style={{left: "35px", top: "375px"}}
+                style={{left: "26px", top: "367px"}}
                 onClick={() => totalState >= 60 ? handleQuick(60) : handleLowFunds()}
             >60
             </button>
             <button
-                style={{left: "35px", top: "415px"}}
+                style={{left: "26px", top: "408px"}}
                 onClick={() => totalState >= 80 ? handleQuick(80) : handleLowFunds()}
             >80
             </button>
             <button
-                style={{left: "468px", top: "294px"}}
+                style={{left: "463px", top: "285px"}}
                 onClick={() => totalState >= 100 ? handleQuick(100) : handleLowFunds()}
             >100
             </button>
             <button
-                style={{left: "468px", top: "334px"}}
+                style={{left: "463px", top: "326px"}}
                 onClick={() => totalState >= 200 ? handleQuick(200) : handleLowFunds()}
             >200
             </button>
             <button
-                style={{left: "468px", top: "376px"}}
+                style={{left: "463px", top: "367px"}}
                 onClick={() => totalState >= 500 ? handleQuick(500) : handleLowFunds()}
             >500
             </button>
             <button
-                style={{left: "464px", top: "417px"}}
+                style={{left: "462px", top: "408px"}}
                 onClick={() => totalState >= 1000 ? handleQuick(1000) : handleLowFunds()}
             >1000
             </button>

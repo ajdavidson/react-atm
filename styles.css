@@ -35,6 +35,26 @@ form {
     top: 220px;
     left: 140px;
 }
+/*#submit-input {*/
+/*    font-size:15px;*/
+/*    font-family:Arial;*/
+/*    width:44px;*/
+/*    height:32px;*/
+/*    border-width:3px;*/
+/*    color:#ffffff;*/
+/*    border-color:rgba(127, 255, 0, 1);*/
+/*    font-weight:bold;*/
+/*    border-top-left-radius:7px;*/
+/*    border-top-right-radius:7px;*/
+/*    border-bottom-left-radius:7px;*/
+/*    border-bottom-right-radius:7px;*/
+/*    text-shadow: 0px 1px 0px #1570cd;*/
+/*    background:linear-gradient(#3d94f6, rgba(0, 109, 173, 1));*/
+/*}*/
+/*#submit-input:hover {*/
+/*    background: linear-gradient(rgba(0, 109, 173, 1), #3d94f6);*/
+/*}*/
+
 
 #form-box {
     background-image: url("atm-icon-blue.png");
@@ -51,13 +71,38 @@ form {
     height: 692px;
     width: 553px;
 }
+/*#root button {*/
+/*    position: absolute;*/
+/*    background:none;*/
+/*    border:0;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    border: 2px solid #7FFF00;*/
+/*    border-radius: 7px;*/
+/*    width: 44px;*/
+/*    height: 32px;*/
+/*}*/
 #root button {
     position: absolute;
-    background:none;
-    border:0;
-    color: white;
-    font-weight: bold;
+    font-size:15px;
+    font-family:Arial;
+    width:44px;
+    height:32px;
+    border-width:3px;
+    color:#ffffff;
+    border-color:rgba(127, 255, 0, 1);
+    font-weight:bold;
+    border-top-left-radius:7px;
+    border-top-right-radius:7px;
+    border-bottom-left-radius:7px;
+    border-bottom-right-radius:7px;
+    text-shadow: 0px 1px 0px #1570cd;
+    background:linear-gradient(#3d94f6, rgba(0, 109, 173, 1));
 }
+#root button:hover {
+    background: linear-gradient(rgba(0, 109, 173, 1), #3d94f6);
+}
+
 /*#qc {*/
 /*    position: absolute;*/
 /*    left: 10px;*/
