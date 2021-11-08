@@ -48,10 +48,10 @@ const Account = () => {
         setAtmMsg(msg);
         setTimeout(function () {
             setAtmMsg('Transaction Complete...');
-        }, 3000);
+        }, 2000);
         setTimeout(function () {
             setAtmMsg(defAtmMsg);
-        }, 6000);
+        }, 4000);
     };
 
     const handleModeSelect = (event) => {
@@ -62,18 +62,18 @@ const Account = () => {
             setAtmMsg('Enter Cash Below...');
             setTimeout(function () {
                 setAtmMsg('Up to $1000...');
-            }, 3000);
+            }, 2000);
             setIsDeposit(true);
         } else {
             setAtmMsg('Preparing to dispense...');
             setTimeout(function () {
                 setAtmMsg('Enter Amount Below...');
-            }, 3000);
+            }, 2000);
             setIsDeposit(false);
         }
         setTimeout(function () {
             setAtmMsg(defAtmMsg);
-        }, 6000);
+        }, 4000);
     };
     const handleQuick = (num) => {
         setTotalState(totalState - num);
@@ -128,7 +128,7 @@ const Account = () => {
             >500
             </button>
             <button
-                style={{left: "462px", top: "408px"}}
+                style={{left: "460px", top: "408px", width: "50px"}}
                 onClick={() => totalState >= 1000 ? handleQuick(1000) : handleLowFunds()}
             >1000
             </button>
