@@ -2,18 +2,35 @@ const ATMDeposit = ({onChange, isDeposit, isValid}) => {
     const choice = ['Deposit', 'Cash Back'];
     console.log(`ATM isDeposit: ${isDeposit}`);
     return (
-        <label className="label huge">
+        <React.Fragment>
+
             <h3><i className="fas fa-money-bill-wave"></i> {choice[Number(!isDeposit)]}</h3>
             <input id="number-input" type="number" width="200" step="20" min="0" max="1000" onChange={onChange}
                    onKeyPress={preventMe} onPaste={preventMe}/>
             <input type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
-        </label>
-    );
+        </React.Fragment>
+    )
+        ;
 };
 
 const preventMe = (e) => {
     e.preventDefault();
 };
+
+// const QuickCash = () => {
+//
+//     return (
+//         <>
+//             <button style={{position: "absolute", left: "42px", top: "291px"}}
+//                     onClick={()=>alert('clicked')}
+//             >20
+//             </button>
+//             <button style={{position: "absolute", left: "42px", top: "331px"}}>40</button>
+//         </>
+//
+//     );
+// };
+
 
 const Account = () => {
     // let deposit = 0; // state of this transaction
@@ -55,15 +72,56 @@ const Account = () => {
         }
     };
 
-
     return (
-        <form onSubmit={handleSubmit}>
-            <>
-                <h3><i className="fas fa-piggy-bank"></i> Welcome to PIGGY Bank</h3>
-                <h3 id="total"><i className="fas fa-chart-bar"></i> {status}</h3>
-                <label>Select an action below to continue</label>
+        <React.Fragment>
+            <button
+                style={{left: "35px", top: "294px"}}
+                onClick={() => setTotalState(totalState + 20)}
+            >20
+            </button>
+            <button
+                style={{left: "35px", top: "334px"}}
+                onClick={() => setTotalState(totalState + 40)}
+            >40
+            </button>
+            <button
+                style={{left: "35px", top: "375px"}}
+                onClick={() => setTotalState(totalState + 60)}
+            >60
+            </button>
+            <button
+                style={{left: "35px", top: "415px"}}
+                onClick={() => setTotalState(totalState + 80)}
+            >80
+            </button>
+            <button
+                style={{left: "468px", top: "294px"}}
+                onClick={() => setTotalState(totalState + 100)}
+            >100
+            </button>
+            <button
+                style={{left: "468px", top: "334px"}}
+                onClick={() => setTotalState(totalState + 200)}
+            >200
+            </button>
+            <button
+                style={{left: "468px", top: "376px"}}
+                onClick={() => setTotalState(totalState + 500)}
+            >500
+            </button>
+            <button
+                style={{left: "464px", top: "417px"}}
+                onClick={() => setTotalState(totalState + 1000)}
+            >1000
+            </button>
+
+            <form onSubmit={handleSubmit}>
+
+                <h3><i className="fas fa-piggy-bank fa-lg"></i> Welcome to PIGGY Bank</h3>
+                <h3 id="total"><i className="fas fa-chart-bar fa-lg"></i> {status}</h3>
+                <label>Select or use QuickCash Buttons</label>
                 <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
-                    <option id="no-selection" value=""/>
+                    <option id="no-selection" value="">Transaction</option>
                     <option id="deposit-selection" value="Deposit">
                         Deposit
                     </option>
@@ -78,9 +136,12 @@ const Account = () => {
                         isValid={isValid}
                     />
                 )}
-            </>
-        </form>
+
+            </form>
+        </React.Fragment>
     );
 };
 // ========================================
+
 ReactDOM.render(<Account/>, document.getElementById('root'));
+//ReactDOM.render(<QuickCash/>, document.getElementById('qc'));
