@@ -18,10 +18,11 @@ const preventMe = (e) => {
 
 
 const Account = () => {
-    // let deposit = 0; // state of this transaction
+    const defAtmMsg = 'Piggy Bank ATM';
     const [deposit, setDeposit] = React.useState(0);
     const [totalState, setTotalState] = React.useState(2700);
     const [isDeposit, setIsDeposit] = React.useState(true);
+    const [atmMsg, setAtmMsg] = React.useState('Welcome to PIGGY Bank');
     const [atmMode, setAtmMode] = React.useState('');
     const [isValid, setIsValid] = React.useState(false);
 
@@ -44,6 +45,10 @@ const Account = () => {
         setTotalState(newTotal);
         setIsValid(false);
         event.preventDefault();
+        let msg = isDeposit ? 'Depositing...' : 'Please take your Cash...';
+        setAtmMsg(msg);
+        setTimeout(function(){ setAtmMsg('Transaction Complete...'); }, 3000);
+        setTimeout(function(){ setAtmMsg(defAtmMsg); }, 6000);
     };
 
     const handleModeSelect = (event) => {
@@ -102,7 +107,7 @@ const Account = () => {
 
             <form onSubmit={handleSubmit}>
 
-                <h3><i className="fas fa-piggy-bank fa-lg"></i> Welcome to PIGGY Bank</h3>
+                <h3><i className="fas fa-piggy-bank fa-lg"></i> {atmMsg}</h3>
                 <h3 id="total"><i className="fas fa-chart-bar fa-lg"></i> {status}</h3>
                 <label>Select or use QuickCash Buttons</label>
                 <select onChange={(e) => handleModeSelect(e)} name="mode" id="mode-select">
