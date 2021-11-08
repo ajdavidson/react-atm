@@ -3,10 +3,19 @@ const ATMDeposit = ({onChange, isDeposit, isValid}) => {
     console.log(`ATM isDeposit: ${isDeposit}`);
     return (
         <React.Fragment>
-            <h3 style={{marginBottom:"5px",marginTop:"7px"}}><i className="fas fa-money-bill-wave"></i> {choice[Number(!isDeposit)]}</h3>
-            <input id="number-input" type="number" width="200" step="20" min="0" max="1000" onChange={onChange}
+            <h3 style={{marginBottom: "5px", marginTop: "7px"}}><i
+                className="fas fa-money-bill-wave"></i> {choice[Number(!isDeposit)]}</h3>
+            <input style={{
+                border: "3px solid #7FFF00",
+                borderRadius: "7px",
+                fontWeight: "bold",
+                color: "#006dad",
+                paddingRight: "5px",
+                marginRight: "7px"
+            }} id="number-input" type="number" width="200" step="20" min="0" max="1000" onChange={onChange}
                    onKeyPress={preventMe} onPaste={preventMe}/>
-            <input style={{border: "3px solid #7FFF00", borderRadius: "7px", fontWeight:"bold", color:"#006dad"}} type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
+            <input style={{border: "3px solid #7FFF00", borderRadius: "7px", fontWeight: "bold", color: "#006dad"}}
+                   type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
         </React.Fragment>
     );
 };
@@ -135,12 +144,18 @@ const Account = () => {
 
             <form onSubmit={handleSubmit}>
 
-                <h3 style={{marginLeft:"0px"}}><i className="fas fa-piggy-bank fa-2x"></i> {atmMsg}</h3>
+                <h3 style={{marginLeft: "0px"}}><i className="fas fa-piggy-bank fa-2x"></i> {atmMsg}</h3>
                 <h3 id="total"><i className="fas fa-chart-bar fa-lg"></i> {status}</h3>
                 <label>Select or use QuickCash Buttons</label>
-                <select style={{border: "3px solid #7FFF00", borderRadius: "7px", fontWeight:"bold", color:"#006dad",marginTop:"5px"}}
-                    onChange={(e) => handleModeSelect(e)}
-                    name="mode" id="mode-select">
+                <select style={{
+                    border: "3px solid #7FFF00",
+                    borderRadius: "7px",
+                    fontWeight: "bold",
+                    color: "#006dad",
+                    marginTop: "5px"
+                }}
+                        onChange={(e) => handleModeSelect(e)}
+                        name="mode" id="mode-select">
                     <option id="no-selection" value="">Transaction</option>
                     <option id="deposit-selection" value="Deposit">
                         Deposit
