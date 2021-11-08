@@ -3,12 +3,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
-
-.container {
-    width: 100%;
-    height: 100%;
-    margin: 0;
+h3{
+    margin: 15px;
 }
+
 
 /*button {*/
 /*    background-color: #0c80f3;*/
@@ -27,13 +25,14 @@ body {
 
 select {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 form {
     position: absolute;
-    top: 220px;
-    left: 140px;
+    top: 230px;
+    left: 130px;
+    margin: 0;
 }
 /*#submit-input {*/
 /*    font-size:15px;*/
@@ -54,7 +53,11 @@ form {
 /*#submit-input:hover {*/
 /*    background: linear-gradient(rgba(0, 109, 173, 1), #3d94f6);*/
 /*}*/
-
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
 
 #form-box {
     background-image: url("atm-icon-blue.png");
