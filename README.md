@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/demo.gif" alt="React Atm" />
+  <img src="./demo.gif" alt="React Atm" />
 
 &#xa0;
 
