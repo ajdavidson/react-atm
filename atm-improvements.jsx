@@ -6,7 +6,7 @@ const ATMDeposit = ({onChange, isDeposit, isValid}) => {
             <h3><i className="fas fa-money-bill-wave"></i> {choice[Number(!isDeposit)]}</h3>
             <input id="number-input" type="number" width="200" step="20" min="0" max="1000" onChange={onChange}
                    onKeyPress={preventMe} onPaste={preventMe}/>
-            <input style={{border: "2px solid #7FFF00"}} type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
+            <input style={{border: "3px solid #7FFF00", borderRadius: "7px", fontWeight:"bold", color:"#006dad"}} type="submit" disabled={!isValid} width="200" value="Submit" id="submit-input"/>
         </React.Fragment>
     );
 };
