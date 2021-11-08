@@ -1,12 +1,12 @@
 <div align="center" id="top"> 
   <!-- <img src="./.github/app.gif" alt="React Atm" /> -->
 
-  &#xa0;
+&#xa0;
 
   <!-- <a href="https://reactatm.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">React ATM</h1>
+<h1 align="center">:atm: React ATM :moneybag:</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/ajdavidson/react-atm?color=56BEB8">
@@ -46,27 +46,34 @@
 
 ## :eye_speech_bubble: About ##
 
-:atm: Describe your project :moneybag:
+React ATM Simulator. Refactoring assignment started with setting the 
+increments to be of 20 for the input field. A minimum of 0 and maximum 
+of 1000 was also set. KeyPress and Paste were also suppressed to enforce
+a 20 step imitation.  A field of buttons was created to simulate the QuickCash 
+withdrawal feature.  Conditions were programmed to ensure continued validity.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Set to work with increments of 20 max 1000\
+:heavy_check_mark: Many conditions programmed to assure validity\
+:heavy_check_mark: QuickCash Feature
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
+- [JavaScript](https://www.ecma-international.org/)
+- [CSS](https://www.w3.org/TR/CSS/#css)
+- [HTML](https://whatwg.org/)
+- [Node.js](https://nodejs.org/en/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/)
+installed.
 
 ## :checkered_flag: Starting ##
 
@@ -78,10 +85,13 @@ $ git clone https://github.com/ajdavidson/react-atm
 $ cd react-atm
 
 # Install dependencies
-$ yarn
+$ http-server
 
 # Run the project
-$ yarn start
+$ Available on:
+  http://127.0.0.1:8080
+  http://localhost:8080
+
 
 # The server will initialize in the <http://localhost:3000>
 ```
@@ -89,7 +99,6 @@ $ yarn start
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
 
 Made with :heart: by <a href="https://github.com/ajdavidson" target="_blank">AJD</a>
 
