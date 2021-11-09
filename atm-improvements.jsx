@@ -164,7 +164,7 @@ const Account = () => {
                 borderRadius:"15px",
                 padding: "0px",
                 backgroundColor: lightW
-            }}className="blink_me"/>
+            }} className="blink_me"/>
 
             <button
                 style={{left: "26px", top: "285px"}}
