@@ -49,8 +49,8 @@
 React ATM Simulator. Refactoring assignment started with setting the increments to be of 20 for the input field. A
 minimum of 0 and maximum of 1000 was also set. KeyPress and Paste were also suppressed to enforce a 20 step imitation. A
 field of buttons was created to simulate the QuickCash withdrawal feature. Many conditions were programmed to ensure
-continued validity. Provided an async message area with dynamic response using state. Transaction indicator lights.
-Transaction log of running gross total deposits and withdrawals.
+continued validity. Provided an async message area with dynamic response using state. Animated transaction indicator
+lights. Transaction log of running gross total deposits and withdrawals.
 
 ## :sparkles: Features ##
 
@@ -58,7 +58,7 @@ Transaction log of running gross total deposits and withdrawals.
 :heavy_check_mark: Many conditions programmed to assure validity\
 :heavy_check_mark: Dynamic async response message element\
 :heavy_check_mark: QuickCash feature\
-:heavy_check_mark: Transaction indicator lights\
+:heavy_check_mark: Transaction animated indicator lights\
 :heavy_check_mark: Transaction log
 
 ## :rocket: Technologies ##
