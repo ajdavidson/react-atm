@@ -139,7 +139,7 @@ const Account = () => {
                     className="fas fa-file-invoice-dollar"></i> Transaction Log</label>
                 <hr style={{borderTop: "1px dotted #7FFF00", marginTop: "2px"}}/>
                 <label><i
-                    className="far fa-plus-square"></i> : {grossTotalD}</label><br/>
+                    className="far fa-plus-square"></i> : &nbsp;{grossTotalD}</label><br/>
                 <label><i
                     className="far fa-minus-square"></i> : {grossTotalW}</label>
             </div>

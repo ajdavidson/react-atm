@@ -122,3 +122,6 @@ form {
 /*    left: 42px;*/
 /*    top: 291px;*/
 /*}*/
+.fa-file-invoice-dollar, .fa-piggy-bank, .fa-chart-bar, .fa-money-bill-wave{
+    color:#7FFF00;
+}
