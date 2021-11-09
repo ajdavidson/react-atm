@@ -115,20 +115,21 @@ const Account = () => {
     return (
         <React.Fragment>
             <div style={{
-                height: "60px",
+                height: "70px",
                 position: "absolute",
                 left: "265px",
-                top: "365px",
+                top: "355px",
                 border: "2px dashed #7FFF00",
                 padding: "5px"
             }}>
 
                 <label><i
-                    className="fas fa-file-invoice-dollar"></i> Transaction Log</label><br/>
+                    className="fas fa-file-invoice-dollar"></i> Transaction Log</label>
+                <hr style={{borderTop: "1px dotted #7FFF00", marginTop:"2px"}}/>
                 <label><i
-                    className="far fa-plus-square"></i> Total: {grossTotalD}</label><br/>
+                    className="far fa-plus-square"></i> : {grossTotalD}</label><br/>
                 <label><i
-                    className="far fa-minus-square"></i> Total: {grossTotalW}</label>
+                    className="far fa-minus-square"></i> : {grossTotalW}</label>
 
 
             </div>
