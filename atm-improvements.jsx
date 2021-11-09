@@ -35,6 +35,8 @@ const Account = () => {
     const [isValid, setIsValid] = React.useState(false);
     const [grossTotalD, setGrossTotalD] = React.useState(0);
     const [grossTotalW, setGrossTotalW] = React.useState(0);
+    const [lightD, setLightD] = React.useState('#7FFF00');
+    const [lightW, setLightW] = React.useState('none');
 
     let status = `Account Balance $ ${totalState} `;
     console.log(`Account Rendered with isDeposit: ${isDeposit}`);
@@ -86,12 +88,17 @@ const Account = () => {
             setTimeout(function () {
                 setAtmMsg('Up to $1000...');
             }, 2000);
+            setLightW('#00000000');
+            setLightD('#7FFF00');
             setIsDeposit(true);
+
         } else {
             setAtmMsg('Preparing to dispense...');
             setTimeout(function () {
                 setAtmMsg('Enter Amount Below...');
             }, 2000);
+            setLightD('none')
+            setLightW('#7FFF00');
             setIsDeposit(false);
         }
         setTimeout(function () {
@@ -125,14 +132,24 @@ const Account = () => {
 
                 <label><i
                     className="fas fa-file-invoice-dollar"></i> Transaction Log</label>
-                <hr style={{borderTop: "1px dotted #7FFF00", marginTop:"2px"}}/>
+                <hr style={{borderTop: "1px dotted #7FFF00", marginTop: "2px"}}/>
                 <label><i
                     className="far fa-plus-square"></i> : {grossTotalD}</label><br/>
                 <label><i
                     className="far fa-minus-square"></i> : {grossTotalW}</label>
-
-
             </div>
+            <div style={{
+                height: "37px",
+                width: "321px",
+                position: "absolute",
+                left: "96px",
+                top: "610px",
+                border: "0",
+                borderRadius:"15px",
+                padding: "0px",
+                backgroundColor: lightW
+            }}/>
+
             <button
                 style={{left: "26px", top: "285px"}}
                 // onClick={() => totalState >= 20 ? setTotalState(totalState - 20) : ''}
