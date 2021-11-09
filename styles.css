@@ -6,7 +6,11 @@ body {
 h3{
     margin: 15px 15px 15px 5px;
 }
-
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
 
 /*button {*/
 /*    background-color: #0c80f3;*/
