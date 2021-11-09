@@ -125,3 +125,12 @@ form {
 /*.fa-file-invoice-dollar, .fa-piggy-bank, .fa-chart-bar, .fa-money-bill-wave{*/
 /*    color:#7FFF00;*/
 /*}*/
+.blink_me {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
