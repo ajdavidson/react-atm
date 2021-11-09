@@ -33,6 +33,8 @@ const Account = () => {
     const [atmMsg, setAtmMsg] = React.useState('Welcome to PIGGY Bank');
     const [atmMode, setAtmMode] = React.useState('');
     const [isValid, setIsValid] = React.useState(false);
+    const [grossTotalD, setGrossTotalD] = React.useState(0);
+    const [grossTotalW, setGrossTotalW] = React.useState(0);
 
     let status = `Account Balance $ ${totalState} `;
     console.log(`Account Rendered with isDeposit: ${isDeposit}`);
@@ -50,7 +52,19 @@ const Account = () => {
     };
     const handleSubmit = (event) => {
         let newTotal = isDeposit ? totalState + deposit : totalState - deposit;
+        let grossTotal = isDeposit ? grossTotalD + deposit : grossTotalW - deposit;
+        if (isDeposit) {
+            setGrossTotalD(grossTotal)
+        } else {
+            setGrossTotalW(grossTotal)
+        }
+        console.log('Gross Total:' + grossTotal);
+        console.log('Gross TotalD:' + grossTotalD);
+        console.log('Gross TotalW:' + grossTotalW);
+
+
         setTotalState(newTotal);
+
         setIsValid(false);
         event.preventDefault();
         let msg = isDeposit ? 'Depositing...' : 'Please take your Cash...';
@@ -100,6 +114,24 @@ const Account = () => {
 
     return (
         <React.Fragment>
+            <div style={{
+                height: "60px",
+                position: "absolute",
+                left: "265px",
+                top: "365px",
+                border: "2px dashed #7FFF00",
+                padding: "5px"
+            }}>
+
+                <label><i
+                    className="fas fa-file-invoice-dollar"></i> Transaction Log</label><br/>
+                <label><i
+                    className="far fa-plus-square"></i> Total: {grossTotalD}</label><br/>
+                <label><i
+                    className="far fa-minus-square"></i> Total: {grossTotalW}</label>
+
+
+            </div>
             <button
                 style={{left: "26px", top: "285px"}}
                 // onClick={() => totalState >= 20 ? setTotalState(totalState - 20) : ''}
