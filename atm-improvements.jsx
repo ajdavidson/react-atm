@@ -108,8 +108,13 @@ const Account = () => {
     const handleQuick = (num) => {
         setTotalState(totalState - num);
         setAtmMsg('QuickCash: $' + num);
+        setGrossTotalW(grossTotalW - num)
         setTimeout(function () {
             setAtmMsg(defAtmMsg);
+        }, 1000);
+        setLightW('#7FFF00');
+        setTimeout(function () {
+            setLightW('#fFFFFF00');
         }, 1000);
     };
     const handleLowFunds = () => {
