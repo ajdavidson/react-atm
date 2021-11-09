@@ -112,10 +112,10 @@ const Account = () => {
         setTimeout(function () {
             setAtmMsg(defAtmMsg);
         }, 1000);
-        setLightW('#7FFF00');
-        setTimeout(function () {
-            setLightW('#fFFFFF00');
-        }, 1000);
+        // setLightW('#7FFF00');
+        // setTimeout(function () {
+        //     setLightW('#fFFFFF00');
+        // }, 1000);
     };
     const handleLowFunds = () => {
         setAtmMsg('Insufficient Funds...');
