@@ -35,8 +35,8 @@ const Account = () => {
     const [isValid, setIsValid] = React.useState(false);
     const [grossTotalD, setGrossTotalD] = React.useState(0);
     const [grossTotalW, setGrossTotalW] = React.useState(0);
-    const [lightD, setLightD] = React.useState('#7FFF00');
-    const [lightW, setLightW] = React.useState('none');
+    const [lightD, setLightD] = React.useState('#FFFFFF00');
+    const [lightW, setLightW] = React.useState('#FFFFFF00');
 
     let status = `Account Balance $ ${totalState} `;
     console.log(`Account Rendered with isDeposit: ${isDeposit}`);
@@ -88,7 +88,7 @@ const Account = () => {
             setTimeout(function () {
                 setAtmMsg('Up to $1000...');
             }, 2000);
-            setLightW('#00000000');
+            setLightW('#FFFFFF00');
             setLightD('#7FFF00');
             setIsDeposit(true);
 
@@ -97,7 +97,7 @@ const Account = () => {
             setTimeout(function () {
                 setAtmMsg('Enter Amount Below...');
             }, 2000);
-            setLightD('none')
+            setLightD('#FFFFFF00')
             setLightW('#7FFF00');
             setIsDeposit(false);
         }
@@ -138,6 +138,17 @@ const Account = () => {
                 <label><i
                     className="far fa-minus-square"></i> : {grossTotalW}</label>
             </div>
+            <div style={{
+                height: "10px",
+                width: "142px",
+                position: "absolute",
+                left: "342px",
+                top: "500px",
+                border: "0",
+                borderRadius:"15px",
+                padding: "0px",
+                backgroundColor: lightD
+            }}/>
             <div style={{
                 height: "37px",
                 width: "321px",
